@@ -1,0 +1,7 @@
+#HeaderCustom .logo {
+  width: 120px;
+  height: 45px;
+  /* background: rgba(1, 255, 255, 1); */
+  margin: 0 16px;
+  float: left;
+}
