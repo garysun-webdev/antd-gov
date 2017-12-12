@@ -4,4 +4,17 @@
   /* background: rgba(1, 255, 255, 1); */
   margin: 0 16px;
   float: left;
+  font-size: 1.3em;
+}
+
+#HeaderCustom span {
+  font-size: 1.3em;
+}
+
+.header-item {
+  padding: 0 30px;
+}
+
+.ant-menu-horizontal {
+  border-bottom: none !important;
 }

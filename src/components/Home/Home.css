@@ -1,5 +1,58 @@
+.home-banner {
+  background: #0098b0;
+  width: 100%;
+  /* margin-left: -16px; */
+  /* margin-top: 4px; */
+  height: 200px;
+  padding: 0 16px;
+}
+
+.home-banner > div {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.banner-text {
+  padding-top: 30px;
+}
+
+.banner-text > p {
+  font-size: 2.5em;
+  color: white;
+  line-height: 1.4em;
+  font-weight: 200;
+  padding: 20px 0 10px 0;
+}
+
 .grid-container {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 10px auto;
+}
+
+.card-title {
+  padding-bottom: 12px;
+}
+
+.card-text {
+  border-top: 2px solid black;
+  font-size: 1.3em;
+}
+
+.card-text > p {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  color: black;
+}
+
+/* image card */
+.custom-image img {
+  display: block;
+}
+.custom-card {
+  padding: 10px 16px;
+}
+.custom-card p {
+  color: #999;
 }

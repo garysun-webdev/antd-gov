@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BannerAnim, { Element } from "rc-banner-anim";
 import TweenOne from "rc-tween-one";
 import "rc-banner-anim/assets/index.css";
+import "./Banner.css";
 const BgElement = Element.BgElement;
 
 class Banner extends Component {
@@ -12,6 +13,7 @@ class Banner extends Component {
           <BgElement
             key="bg"
             className="bg"
+            id="element1"
             style={{
               background: "#364D79"
             }}
@@ -29,6 +31,7 @@ class Banner extends Component {
             The Fast Way Use Animation In React
           </TweenOne>
         </Element>
+
         <Element prefixCls="banner-user-elem" key="1">
           <BgElement
             key="bg"

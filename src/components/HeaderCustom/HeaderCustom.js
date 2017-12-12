@@ -9,42 +9,45 @@ const MenuItemGroup = Menu.ItemGroup;
 const Search = Input.Search;
 
 class HeaderCustom extends Component {
-  constructor() {
-    super();
-    this.state = {
-      current: "mail"
-    };
-  }
   handleClick = e => {
     console.log("click", e);
-    this.setState({
-      current: e.key
-    });
+    this.props.pageSwitch(e.key);
   };
 
   render() {
     return (
-      <Header style={{ background: "#fff" }} id="HeaderCustom">
+      <Header
+        style={{ background: "#fff", lineHeight: "64px" }}
+        id="HeaderCustom"
+      >
         <div className="logo">LOGO</div>
         <Menu
           onClick={this.handleClick}
-          selectedKeys={[this.state.current]}
+          selectedKeys={[this.props.currentPage]}
           mode="horizontal"
-          style={{ lineHeight: "64px" }}
+          style={{ lineHeight: "61px" }}
         >
-          <Menu.Item key="mail">
+          <Menu.Item key="home" className="header-item">
             <Link to="/">
-              <Icon type="mail" />Navigation One
+              <span>
+                <Icon type="home" />Home
+              </span>
             </Link>
           </Menu.Item>
-          <Menu.Item key="app">
-            <Link to="/about">
-              <Icon type="appstore" />Navigation Two
+          <Menu.Item key="app" className="header-item">
+            <Link to="/FAQ">
+              <span>
+                <Icon type="info-circle-o" />FAQ
+              </span>
             </Link>
           </Menu.Item>
 
-          <Menu.Item>
-            <Link to="/contact">Contact US</Link>
+          <Menu.Item className="header-item">
+            <Link to="/contact">
+              <span>
+                <Icon type="global" />Contact US
+              </span>
+            </Link>
           </Menu.Item>
         </Menu>
       </Header>
