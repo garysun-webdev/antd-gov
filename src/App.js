@@ -17,14 +17,12 @@ class App extends Component {
       <Router>
         <Layout className="layout">
           <HeaderCustomWithState />
-
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
             <Route exact path="/faq" component={FAQ} />
             <Route exact path="/contact" component={Contact} />
           </Switch>
-
           <Footer style={{ textAlign: "center" }}>I'm GOV</Footer>
         </Layout>
       </Router>

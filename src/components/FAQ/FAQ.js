@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout, Collapse, Row, Col } from "antd";
+import Banner from "../UI/Banner";
 import "./FAQ.css";
 const { Content } = Layout;
 const Panel = Collapse.Panel;
@@ -8,21 +9,7 @@ const text = `As the courier will arrive during business hours we recommend that
 
 const FAQ = () => (
   <div>
-    <div className="home-banner">
-      <div>
-        <div className="gutter-example">
-          <div className="gutter-example">
-            <Row gutter={16}>
-              <Col className="gutter-row" md={6}>
-                <div className="banner-text">
-                  <p>Govement Service and Information</p>
-                </div>
-              </Col>
-            </Row>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Banner bannerText="Frequently Asked Questions" />
 
     <Content style={{ padding: "10px 16px", overflow: "initial" }}>
       <div className="grid-container">
@@ -44,6 +31,76 @@ const FAQ = () => (
                 <Panel
                   header="How much will the COLA amount be for 2018 and when will I receive it?"
                   key="2"
+                  style={{ padding: "10px" }}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header="How much will the COLA amount be for 2018 and when will I receive it?"
+                  key="3"
+                  style={{ padding: "10px" }}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header="How much will the COLA amount be for 2018 and when will I receive it?"
+                  key="3"
+                  style={{ padding: "10px" }}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header="How much will the COLA amount be for 2018 and when will I receive it?"
+                  key="3"
+                  style={{ padding: "10px" }}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header="How much will the COLA amount be for 2018 and when will I receive it?"
+                  key="3"
+                  style={{ padding: "10px" }}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header="How much will the COLA amount be for 2018 and when will I receive it?"
+                  key="3"
+                  style={{ padding: "10px" }}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header="How much will the COLA amount be for 2018 and when will I receive it?"
+                  key="3"
+                  style={{ padding: "10px" }}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header="How much will the COLA amount be for 2018 and when will I receive it?"
+                  key="3"
+                  style={{ padding: "10px" }}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header="How much will the COLA amount be for 2018 and when will I receive it?"
+                  key="3"
+                  style={{ padding: "10px" }}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header="How much will the COLA amount be for 2018 and when will I receive it?"
+                  key="3"
+                  style={{ padding: "10px" }}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header="How much will the COLA amount be for 2018 and when will I receive it?"
+                  key="3"
                   style={{ padding: "10px" }}
                 >
                   <p>{text}</p>

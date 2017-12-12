@@ -11,7 +11,6 @@ const Search = Input.Search;
 class HeaderCustom extends Component {
   handleClick = e => {
     console.log("click", e);
-    this.props.pageSwitch(e.key);
   };
 
   render() {
@@ -23,18 +22,18 @@ class HeaderCustom extends Component {
         <div className="logo">LOGO</div>
         <Menu
           onClick={this.handleClick}
-          selectedKeys={[this.props.currentPage]}
+          selectedKeys={[this.props.location.pathname]}
           mode="horizontal"
           style={{ lineHeight: "61px" }}
         >
-          <Menu.Item key="home" className="header-item">
+          <Menu.Item key="/" className="header-item">
             <Link to="/">
               <span>
                 <Icon type="home" />Home
               </span>
             </Link>
           </Menu.Item>
-          <Menu.Item key="app" className="header-item">
+          <Menu.Item key="/FAQ" className="header-item">
             <Link to="/FAQ">
               <span>
                 <Icon type="info-circle-o" />FAQ
@@ -42,7 +41,7 @@ class HeaderCustom extends Component {
             </Link>
           </Menu.Item>
 
-          <Menu.Item className="header-item">
+          <Menu.Item key="/contact" className="header-item">
             <Link to="/contact">
               <span>
                 <Icon type="global" />Contact US

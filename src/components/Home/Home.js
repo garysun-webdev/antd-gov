@@ -1,28 +1,13 @@
 import React from "react";
-import Banner from "../UI/Banner";
 import { Row, Col, Card, Icon, Layout } from "antd";
 import { Link } from "react-router-dom";
+import Banner from "../UI/Banner";
 import "./Home.css";
 const { Content } = Layout;
 
 const Home = () => (
   <div>
-    <div className="home-banner">
-      <div>
-        <div className="gutter-example">
-          <div className="gutter-example">
-            <Row gutter={16}>
-              <Col className="gutter-row" md={6}>
-                <div className="banner-text">
-                  <p>Govement Service and Information</p>
-                </div>
-              </Col>
-            </Row>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <Banner bannerText="Government Services and Information" />
     <Content style={{ padding: "0 16px", overflow: "initial" }}>
       <div className="grid-container">
         <div className="gutter-example">
