@@ -44,7 +44,35 @@ const FAQ = () => (
                 </Panel>
                 <Panel
                   header="How much will the COLA amount be for 2018 and when will I receive it?"
-                  key="3"
+                  key="4"
+                  style={{ padding: "10px" }}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header="How much will the COLA amount be for 2018 and when will I receive it?"
+                  key="5"
+                  style={{ padding: "10px" }}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header="How much will the COLA amount be for 2018 and when will I receive it?"
+                  key="6"
+                  style={{ padding: "10px" }}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header="How much will the COLA amount be for 2018 and when will I receive it?"
+                  key="7"
+                  style={{ padding: "10px" }}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header="How much will the COLA amount be for 2018 and when will I receive it?"
+                  key="8"
                   style={{ padding: "10px" }}
                 >
                   <p>{text}</p>
@@ -58,56 +86,14 @@ const FAQ = () => (
                 </Panel>
                 <Panel
                   header="How much will the COLA amount be for 2018 and when will I receive it?"
-                  key="3"
+                  key="9"
                   style={{ padding: "10px" }}
                 >
                   <p>{text}</p>
                 </Panel>
                 <Panel
                   header="How much will the COLA amount be for 2018 and when will I receive it?"
-                  key="3"
-                  style={{ padding: "10px" }}
-                >
-                  <p>{text}</p>
-                </Panel>
-                <Panel
-                  header="How much will the COLA amount be for 2018 and when will I receive it?"
-                  key="3"
-                  style={{ padding: "10px" }}
-                >
-                  <p>{text}</p>
-                </Panel>
-                <Panel
-                  header="How much will the COLA amount be for 2018 and when will I receive it?"
-                  key="3"
-                  style={{ padding: "10px" }}
-                >
-                  <p>{text}</p>
-                </Panel>
-                <Panel
-                  header="How much will the COLA amount be for 2018 and when will I receive it?"
-                  key="3"
-                  style={{ padding: "10px" }}
-                >
-                  <p>{text}</p>
-                </Panel>
-                <Panel
-                  header="How much will the COLA amount be for 2018 and when will I receive it?"
-                  key="3"
-                  style={{ padding: "10px" }}
-                >
-                  <p>{text}</p>
-                </Panel>
-                <Panel
-                  header="How much will the COLA amount be for 2018 and when will I receive it?"
-                  key="3"
-                  style={{ padding: "10px" }}
-                >
-                  <p>{text}</p>
-                </Panel>
-                <Panel
-                  header="How much will the COLA amount be for 2018 and when will I receive it?"
-                  key="3"
+                  key="10"
                   style={{ padding: "10px" }}
                 >
                   <p>{text}</p>
@@ -116,19 +102,7 @@ const FAQ = () => (
             </div>
           </Col>
           <Col className="gutter-row" md={8}>
-            <div className="gutter-box">
-              <Collapse bordered={false} defaultActiveKey={["1"]}>
-                <Panel header="This is panel header 1" key="1">
-                  <p>{text}</p>
-                </Panel>
-                <Panel header="This is panel header 2" key="2">
-                  <p>{text}</p>
-                </Panel>
-                <Panel header="This is panel header 3" key="3">
-                  <p>{text}</p>
-                </Panel>
-              </Collapse>
-            </div>
+            <div className="gutter-box">This is a chatbot</div>
           </Col>
         </Row>
       </div>

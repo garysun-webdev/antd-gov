@@ -1,0 +1,10 @@
+.dropzone-style {
+  margin: 20px 0;
+}
+
+.dropzone-style div {
+  padding: 10px 10px;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
