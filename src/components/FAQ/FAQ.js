@@ -1,7 +1,9 @@
 import React from "react";
 import { Layout, Collapse, Row, Col } from "antd";
 import Banner from "../UI/Banner";
+import Chatbot from "../../containers/ChatbotWithState";
 import "./FAQ.css";
+import ChatbotWithState from "../../containers/ChatbotWithState";
 const { Content } = Layout;
 const Panel = Collapse.Panel;
 
@@ -79,7 +81,7 @@ const FAQ = () => (
                 </Panel>
                 <Panel
                   header="How much will the COLA amount be for 2018 and when will I receive it?"
-                  key="3"
+                  key="11"
                   style={{ padding: "10px" }}
                 >
                   <p>{text}</p>
@@ -102,7 +104,9 @@ const FAQ = () => (
             </div>
           </Col>
           <Col className="gutter-row" md={8}>
-            <div className="gutter-box">This is a chatbot</div>
+            <div className="gutter-box">
+              <ChatbotWithState />
+            </div>
           </Col>
         </Row>
       </div>
