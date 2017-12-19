@@ -57,7 +57,7 @@ const Home = () => (
           <Col className="gutter-row" md={6}>
             <ul>
               <li>
-                <Link to="/charts">
+                <Link to="/chart">
                   <Card bordered={false} bodyStyle={{ padding: 5 }}>
                     <div className="card-title">
                       <h1>
@@ -76,7 +76,7 @@ const Home = () => (
                 </Link>
               </li>
               <li>
-                <Link to="/charts">
+                <Link to="/chart">
                   <Card bordered={false} bodyStyle={{ padding: 5 }}>
                     <div className="card-title">
                       <h1>
@@ -95,68 +95,7 @@ const Home = () => (
                 </Link>
               </li>
               <li>
-                <Link to="/charts">
-                  <Card bordered={false} bodyStyle={{ padding: 5 }}>
-                    <div className="card-title">
-                      <h1>
-                        <Icon type="tag-o" />This is a good part
-                      </h1>
-                    </div>
-                    <div className="card-text">
-                      <p>
-                        Lorem Ipsum has been the industry's standard dummy text
-                        ever since the 1500s, when an unknown printer took a
-                        galley of type and scrambled it to make a type specimen
-                        book.
-                      </p>
-                    </div>
-                  </Card>
-                </Link>
-              </li>
-            </ul>
-          </Col>
-          <Col className="gutter-row" md={6}>
-            <ul>
-              <li>
-                <Link to="/charts">
-                  <Card bordered={false} bodyStyle={{ padding: 5 }}>
-                    <div className="card-title">
-                      <h1>
-                        <Icon type="tag-o" />This is a good part
-                      </h1>
-                    </div>
-                    <div className="card-text">
-                      <p>
-                        Lorem Ipsum has been the industry's standard dummy text
-                        ever since the 1500s, when an unknown printer took a
-                        galley of type and scrambled it to make a type specimen
-                        book.
-                      </p>
-                    </div>
-                  </Card>
-                </Link>
-              </li>
-              <li>
-                <Link to="/charts">
-                  <Card bordered={false} bodyStyle={{ padding: 5 }}>
-                    <div className="card-title">
-                      <h1>
-                        <Icon type="tag-o" />This is a good part
-                      </h1>
-                    </div>
-                    <div className="card-text">
-                      <p>
-                        Lorem Ipsum has been the industry's standard dummy text
-                        ever since the 1500s, when an unknown printer took a
-                        galley of type and scrambled it to make a type specimen
-                        book.
-                      </p>
-                    </div>
-                  </Card>
-                </Link>
-              </li>
-              <li>
-                <Link to="/charts">
+                <Link to="/chart">
                   <Card bordered={false} bodyStyle={{ padding: 5 }}>
                     <div className="card-title">
                       <h1>
@@ -179,7 +118,7 @@ const Home = () => (
           <Col className="gutter-row" md={6}>
             <ul>
               <li>
-                <Link to="/charts">
+                <Link to="/chart">
                   <Card bordered={false} bodyStyle={{ padding: 5 }}>
                     <div className="card-title">
                       <h1>
@@ -198,7 +137,7 @@ const Home = () => (
                 </Link>
               </li>
               <li>
-                <Link to="/charts">
+                <Link to="/chart">
                   <Card bordered={false} bodyStyle={{ padding: 5 }}>
                     <div className="card-title">
                       <h1>
@@ -217,7 +156,68 @@ const Home = () => (
                 </Link>
               </li>
               <li>
-                <Link to="/charts">
+                <Link to="/chart">
+                  <Card bordered={false} bodyStyle={{ padding: 5 }}>
+                    <div className="card-title">
+                      <h1>
+                        <Icon type="tag-o" />This is a good part
+                      </h1>
+                    </div>
+                    <div className="card-text">
+                      <p>
+                        Lorem Ipsum has been the industry's standard dummy text
+                        ever since the 1500s, when an unknown printer took a
+                        galley of type and scrambled it to make a type specimen
+                        book.
+                      </p>
+                    </div>
+                  </Card>
+                </Link>
+              </li>
+            </ul>
+          </Col>
+          <Col className="gutter-row" md={6}>
+            <ul>
+              <li>
+                <Link to="/chart">
+                  <Card bordered={false} bodyStyle={{ padding: 5 }}>
+                    <div className="card-title">
+                      <h1>
+                        <Icon type="tag-o" />This is a good part
+                      </h1>
+                    </div>
+                    <div className="card-text">
+                      <p>
+                        Lorem Ipsum has been the industry's standard dummy text
+                        ever since the 1500s, when an unknown printer took a
+                        galley of type and scrambled it to make a type specimen
+                        book.
+                      </p>
+                    </div>
+                  </Card>
+                </Link>
+              </li>
+              <li>
+                <Link to="/chart">
+                  <Card bordered={false} bodyStyle={{ padding: 5 }}>
+                    <div className="card-title">
+                      <h1>
+                        <Icon type="tag-o" />This is a good part
+                      </h1>
+                    </div>
+                    <div className="card-text">
+                      <p>
+                        Lorem Ipsum has been the industry's standard dummy text
+                        ever since the 1500s, when an unknown printer took a
+                        galley of type and scrambled it to make a type specimen
+                        book.
+                      </p>
+                    </div>
+                  </Card>
+                </Link>
+              </li>
+              <li>
+                <Link to="/chart">
                   <Card bordered={false} bodyStyle={{ padding: 5 }}>
                     <div className="card-title">
                       <h1>
@@ -259,7 +259,7 @@ const Home = () => (
               </div>
               <div className="custom-card">
                 <h2>
-                  <Link to="/charts">Europe Street beat</Link>
+                  <Link to="/chart">Europe Street beat</Link>
                 </h2>
                 <p>
                   Lorem Ipsum has been the industry's standard dummy text ever
@@ -280,7 +280,7 @@ const Home = () => (
               </div>
               <div className="custom-card">
                 <h2>
-                  <Link to="/charts">Europe Street beat</Link>
+                  <Link to="/chart">Europe Street beat</Link>
                 </h2>
                 <p>
                   Lorem Ipsum has been the industry's standard dummy text ever
@@ -301,7 +301,7 @@ const Home = () => (
               </div>
               <div className="custom-card">
                 <h2>
-                  <Link to="/charts">Europe Street beat</Link>
+                  <Link to="/chart">Europe Street beat</Link>
                 </h2>
                 <p>
                   Lorem Ipsum has been the industry's standard dummy text ever
