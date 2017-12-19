@@ -9,7 +9,6 @@
 
 .home-banner > div {
   width: 100%;
-  max-width: 1200px;
   margin: auto;
 }
 
@@ -27,8 +26,10 @@
 
 .grid-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 10px auto;
+  /* background: white;
+  padding: 10px; */
 }
 
 .card-title {

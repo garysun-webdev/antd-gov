@@ -26,7 +26,8 @@ export function fetchMessageSuccess(result) {
 export function fetchMessageFailure(error) {
   return {
     type: FETCH_FAILURE,
-    error
+    error,
+    id: nextMsg++
   };
 }
 

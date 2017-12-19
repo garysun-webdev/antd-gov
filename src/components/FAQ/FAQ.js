@@ -1,9 +1,9 @@
 import React from "react";
-import { Layout, Collapse, Row, Col } from "antd";
+import { Layout, Collapse, Row, Col, Breadcrumb } from "antd";
 import Banner from "../UI/Banner";
-import Chatbot from "../../containers/ChatbotWithState";
+import ChatbotIcon from "../Chatbot/ChatbotIcon";
+
 import "./FAQ.css";
-import ChatbotWithState from "../../containers/ChatbotWithState";
 const { Content } = Layout;
 const Panel = Collapse.Panel;
 
@@ -15,8 +15,15 @@ const FAQ = () => (
 
     <Content style={{ padding: "10px 16px", overflow: "initial" }}>
       <div className="grid-container">
+        <Breadcrumb style={{ margin: "16px 0" }}>
+          <Breadcrumb.Item>Home</Breadcrumb.Item>
+          <Breadcrumb.Item>FAQ</Breadcrumb.Item>
+        </Breadcrumb>
         <Row gutter={16}>
-          <Col className="gutter-row" md={16}>
+          <Col className="gutter-row" md={1}>
+            <div className="gutter-box" />
+          </Col>
+          <Col className="gutter-row" md={22}>
             <div className="gutter-box">
               <Collapse
                 bordered={false}
@@ -103,9 +110,10 @@ const FAQ = () => (
               </Collapse>
             </div>
           </Col>
-          <Col className="gutter-row" md={8}>
+          <Col className="gutter-row" md={1}>
             <div className="gutter-box">
-              <ChatbotWithState />
+              {/* <ChatbotWithState /> */}
+              <ChatbotIcon />
             </div>
           </Col>
         </Row>

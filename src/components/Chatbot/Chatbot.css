@@ -1,0 +1,73 @@
+.chatbot-content {
+  width: 330px;
+  height: 380px;
+  overflow: scroll;
+}
+
+.chatbot-userMsg {
+  float: right;
+  clear: left;
+  border-radius: 5px;
+  padding-right: 10px;
+}
+
+.chatbot-avatar {
+  float: left;
+}
+
+.chatbot-botMsg {
+  float: left;
+  clear: right;
+  border-radius: 5px;
+}
+
+.full {
+  width: 100%;
+  clear: both;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.full::after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.bot-spinning {
+  float: left;
+  display: inline-block;
+}
+.bot {
+  float: left;
+  display: inline-block;
+  background-color: #01bad2;
+  border-radius: 10px;
+  padding: 5px 5px;
+}
+.bot p {
+  color: white;
+}
+
+.bot p a {
+  color: white;
+}
+
+.avatar {
+  width: 18px;
+  height: 25px;
+  margin: 6px;
+  display: inline-block;
+  color: white;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+.left {
+  float: left;
+}

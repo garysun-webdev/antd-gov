@@ -54,7 +54,6 @@ const WizardFormSecondPage = props => {
         <Button
           type="primary"
           htmlType="button"
-          size="large"
           style={{
             display: "inline-block",
             float: "left"
@@ -67,7 +66,6 @@ const WizardFormSecondPage = props => {
         <Button
           type="primary"
           htmlType="submit"
-          size="large"
           style={{
             display: "inline-block",
             float: "right"

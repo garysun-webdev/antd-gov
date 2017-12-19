@@ -1,0 +1,9 @@
+.contact-detail li {
+  margin-bottom: 1.1em;
+  font-size: 1.1em;
+}
+
+.contact-detail a {
+  margin-left: 0.5em;
+  text-decoration: underline;
+}

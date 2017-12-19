@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col, Card, Icon, Layout } from "antd";
 import { Link } from "react-router-dom";
 import Banner from "../UI/Banner";
+import ChatBotIcon from "../Chatbot/ChatbotIcon";
 import "./Home.css";
 const { Content } = Layout;
 
@@ -9,6 +10,7 @@ const Home = () => (
   <div>
     <Banner bannerText="Government Services and Information" />
     <Content style={{ padding: "0 16px", overflow: "initial" }}>
+      <ChatBotIcon />
       <div className="grid-container">
         <div className="gutter-example">
           <Row gutter={16}>

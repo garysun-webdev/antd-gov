@@ -44,7 +44,6 @@ class WizardFormThirdPage extends Component {
           <Button
             type="primary"
             htmlType="button"
-            size="large"
             style={{
               display: "inline-block",
               float: "left"
@@ -57,7 +56,6 @@ class WizardFormThirdPage extends Component {
           <Button
             type="primary"
             htmlType="submit"
-            size="large"
             style={{
               display: "inline-block",
               float: "right"

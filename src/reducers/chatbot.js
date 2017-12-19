@@ -1,7 +1,8 @@
 import {
   FETCH_STARTED,
   FETCH_SUCCESS,
-  PUSH_MESSAGE
+  PUSH_MESSAGE,
+  FETCH_FAILURE
 } from "../actions/chatbotActions";
 
 const initialState = [
@@ -27,7 +28,17 @@ export default function(state = initialState, action) {
       //do not modify the existing one but create a new one
       return state.map(msg => {
         if (msg.id === action.id) {
-          return { ...msg, data: action.data };
+          return { ...msg, data: action.data.data, url: action.data.url };
+        } else {
+          return msg;
+        }
+      });
+
+    case FETCH_SUCCESS:
+      //do not modify the existing one but create a new one
+      return state.map(msg => {
+        if (msg.id === action.id) {
+          return { ...msg, data: "Sorry, you speak toooooo fast 🤣", url: "" };
         } else {
           return msg;
         }

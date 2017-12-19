@@ -94,7 +94,6 @@ let WizardFormFirstPage = props => {
           <Button
             type="primary"
             htmlType="submit"
-            size="large"
             style={{
               margin: "auto",
               display: "-webkit-flex"

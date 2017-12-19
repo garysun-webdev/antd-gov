@@ -48,6 +48,14 @@ class HeaderCustom extends Component {
               </span>
             </Link>
           </Menu.Item>
+
+          <Menu.Item key="/charts" className="header-item">
+            <Link to="/chart">
+              <span>
+                <Icon type="area-chart" />Data Virtualization
+              </span>
+            </Link>
+          </Menu.Item>
         </Menu>
       </Header>
     );

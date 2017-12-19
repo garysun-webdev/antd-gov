@@ -1,42 +1,44 @@
 import React, { Component } from "react";
+import ChatInput from "./ChatInput";
+import BotMsg from "./BotMsg";
+import UserMsg from "./UserMsg";
+import "./Chatbot.css";
+
+// import ChatMsg from "./ChatMsg";
 
 class Chatbot extends Component {
-  constructor(props) {
+  constructor() {
     super();
-    this.onInputChange = this.onInputChange.bind(this);
-    this.onFormSubmit = this.onFormSubmit.bind(this);
-    this.state = { msg: "" };
+    // this.refScroll = this.refScroll.bind(this);
+  }
+  componentDidUpdate() {
+    this.refs.node.scrollTop = this.refs.node.scrollHeight;
+    console.log(this.refs.node.scrollTop);
+    console.log(this.refs.node.scrollHeight);
   }
 
-  onInputChange(event) {
-    this.setState({ msg: event.target.value });
-  }
-
-  onFormSubmit(event) {
-    event.preventDefault();
-    this.props.pushMessage(this.state.msg);
-    this.props.fetchMessage(this.state.msg);
-
-    this.setState({ msg: "" });
-  }
+  // refScroll(node) {
+  //   this.node = node;
+  // }
 
   render() {
     return (
-      <form onSubmit={this.onFormSubmit} className="input-group">
-        <input
-          placeholder="...ask the chatbot here..."
-          className="form-control"
-          value={this.state.msg}
-          //onChange={(event)=>this.onInputChange(event)} />
-          onChange={this.onInputChange}
-        />
+      <div className="chatbot">
+        <div className="chatbot-content" ref="node">
+          {this.props.msgFlow.map(msg => {
+            if (msg.sender === "bot")
+              return <BotMsg key={msg.id} text={msg.data} url={msg.url} />;
+            else return <UserMsg key={msg.id} text={msg.data} />;
+          })}
+        </div>
 
-        <span className="input-group-btn">
-          <button className="btn btn-primary" type="submit">
-            Submit
-          </button>
-        </span>
-      </form>
+        <div>
+          <ChatInput
+            pushMessage={this.props.pushMessage}
+            fetchMessage={this.props.fetchMessage}
+          />
+        </div>
+      </div>
     );
   }
 }
