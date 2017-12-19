@@ -10,8 +10,6 @@
     "echarts": "^3.8.5",
     "echarts-for-react": "^2.0.0",
     "lodash.debounce": "^4.0.8",
-    "rc-banner-anim": "^1.0.0",
-    "rc-tween-one": "^1.5.6",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-dropzone": "^4.2.3",
