@@ -1,9 +1,8 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import validate from "./validate";
-import renderField from "./renderField";
 import { TextField } from "redux-form-antd";
-import { Button } from "antd";
+import { Button, Icon } from "antd";
 
 const WizardFormSecondPage = props => {
   const { handleSubmit, previousPage } = props;
@@ -44,12 +43,6 @@ const WizardFormSecondPage = props => {
       <label>c. Third Value</label>
       <Field name="thirdValue" type="text" component={TextField} size="large" />
 
-      <label>
-        11. Do you believe that you have the power to make a change in the
-        world? If so, what would that change be?
-      </label>
-      <Field name="power" type="text" component={TextField} size="large" />
-
       <div>
         <Button
           type="primary"
@@ -60,7 +53,7 @@ const WizardFormSecondPage = props => {
           }}
           onClick={previousPage}
         >
-          Previous
+          <Icon type="left" />Backward
         </Button>
 
         <Button
@@ -71,7 +64,7 @@ const WizardFormSecondPage = props => {
             float: "right"
           }}
         >
-          Next
+          Forward<Icon type="right" />
         </Button>
       </div>
     </form>

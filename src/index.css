@@ -27,20 +27,23 @@ a::after {
   padding: 10px 15px;
 }
 
-.ant-btn-lg {
-  width: 50px !important;
-  height: 50px !important;
-  background: #ee433b !important;
-  color: white !important;
-}
-
 .ant-card {
   margin-top: 5px;
+}
+.background-white {
+  background: white;
+  box-shadow: 2px 2px 5px #888888;
 }
 
 .container-white {
   background: white;
-  box-shadow: 2px 2px 5px #888888;
-  padding: 30px 170px 144px 64px;
+
+  padding: 30px 170px 50px 64px;
+  position: relative;
+}
+
+.container-home {
+  background: white;
+  padding: 56px 30px;
   position: relative;
 }

@@ -1,28 +1,72 @@
 import React, { Component } from "react";
 import { Field, reduxForm } from "redux-form";
 import validate from "./validate";
-import { Button } from "antd";
+import { Button, Icon, Modal } from "antd";
 import { TextField } from "redux-form-antd";
 import ReduxFormDropzone from "./ReduxFormDropzone";
-import { withRouter } from "react-router-dom";
 
 class WizardFormThirdPage extends Component {
   constructor(props) {
     super(props);
     this.showAndRefresh = this.showAndRefresh.bind(this);
+    this.state = {
+      ModalText: "Are you sure to submit the form?",
+      visible: false,
+      confirmLoading: false
+    };
   }
 
+  showModal = () => {
+    this.setState({
+      visible: true
+    });
+  };
+
+  handleOk = () => {
+    this.setState({
+      ModalText: "This window will be closed after two seconds..",
+      confirmLoading: true
+    });
+
+    setTimeout(() => {
+      this.setState({
+        visible: false,
+        confirmLoading: false
+      });
+    }, 2000);
+  };
+
+  handleCancel = () => {
+    console.log("Clicked cancel button");
+    this.setState({
+      visible: false
+    });
+  };
+
   showAndRefresh(values) {
-    this.props.reset();
-    this.props.onSubmit(values);
-    this.props.jumpToFirstPage();
+    console.log(values);
+
+    this.setState({
+      ModalText: `You submitted:\n\n${JSON.stringify(values, null, 2)}`
+    });
+
+    this.showModal();
+    // this.props.reset();
+    // this.props.jumpToFirstPage();
   }
 
   render() {
     const { handleSubmit, pristine, previousPage, submitting } = this.props;
+    const { visible, confirmLoading, ModalText } = this.state;
 
     return (
       <form onSubmit={handleSubmit(this.showAndRefresh)}>
+        <label>
+          11. Do you believe that you have the power to make a change in the
+          world? If so, what would that change be?
+        </label>
+        <Field name="power" type="text" component={TextField} size="large" />
+
         <label>
           12. What do you think about these questions? And why do you think we
           ask them?
@@ -50,8 +94,20 @@ class WizardFormThirdPage extends Component {
             }}
             onClick={previousPage}
           >
-            Previous
+            <Icon type="left" />Backward
           </Button>
+
+          {/* <Button
+            type="primary"
+            htmlType="submit"
+            style={{
+              display: "inline-block",
+              float: "right"
+            }}
+            disabled={pristine || submitting}
+          >
+            Submit
+          </Button> */}
 
           <Button
             type="primary"
@@ -64,6 +120,18 @@ class WizardFormThirdPage extends Component {
           >
             Submit
           </Button>
+
+          <Modal
+            title="Confirm"
+            visible={visible}
+            onOk={this.handleOk}
+            confirmLoading={confirmLoading}
+            onCancel={this.handleCancel}
+            okText="Submit"
+            cancelText="Backward"
+          >
+            <p>{ModalText}</p>
+          </Modal>
         </div>
       </form>
     );

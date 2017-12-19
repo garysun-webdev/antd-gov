@@ -12,10 +12,17 @@ const ChatbotIcon = () => {
   return (
     <Affix
       offsetBottom={50}
-      style={{ position: "fixed", bottom: 50, right: 50 }}
+      style={{ position: "fixed", bottom: 50, right: 50, zIndex: 999 }}
     >
       <Popover placement="topRight" content={popContent} trigger="click">
-        <Button size="large" shape="circle" type="danger" icon="smile-o" />
+        <Button
+          size="large"
+          shape="circle"
+          type="danger"
+          icon="message"
+          className="chatbotIcon"
+          style={{ width: "45px", height: "45px" }}
+        />
       </Popover>
     </Affix>
   );

@@ -7,10 +7,6 @@ import "./Chatbot.css";
 // import ChatMsg from "./ChatMsg";
 
 class Chatbot extends Component {
-  constructor() {
-    super();
-    // this.refScroll = this.refScroll.bind(this);
-  }
   componentDidUpdate() {
     this.refs.node.scrollTop = this.refs.node.scrollHeight;
     console.log(this.refs.node.scrollTop);

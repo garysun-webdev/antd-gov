@@ -2,17 +2,7 @@ import React from "react";
 import Banner from "../UI/Banner";
 import WizardForm from "../Form/WizardForm";
 import ChatbotIcon from "../Chatbot/ChatbotIcon";
-import {
-  Layout,
-  Collapse,
-  Row,
-  Col,
-  Card,
-  Breadcrumb,
-  Button,
-  Icon
-} from "antd";
-import showResults from "../Form/showResults";
+import { Layout, Row, Col, Card, Breadcrumb, Button, Icon } from "antd";
 import GoogleMap from "../GoogleMap";
 import "./Contact.css";
 const { Content } = Layout;
@@ -33,7 +23,7 @@ const Contact = () => {
             <Col className="gutter-row" md={11}>
               <div className="gutter-box">
                 <Card title="Contact us by filling the form!" bordered={false}>
-                  <WizardForm onSubmit={showResults} />
+                  <WizardForm />
                 </Card>
               </div>
             </Col>

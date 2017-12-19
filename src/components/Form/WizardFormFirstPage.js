@@ -1,9 +1,8 @@
 import React from "react";
 import { Field, reduxForm, formValueSelector } from "redux-form";
 import validate from "./validate";
-import renderField from "./renderField";
-import { TextField, SelectField, RadioField } from "redux-form-antd";
-import { Button } from "antd";
+import { TextField, SelectField } from "redux-form-antd";
+import { Button, Icon } from "antd";
 import { connect } from "react-redux";
 
 let WizardFormFirstPage = props => {
@@ -99,7 +98,7 @@ let WizardFormFirstPage = props => {
               display: "-webkit-flex"
             }}
           >
-            Next
+            Forward<Icon type="right" />
           </Button>
         </div>
       </form>

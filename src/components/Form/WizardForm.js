@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import WizardFormFirstPage from "./WizardFormFirstPage";
 import WizardFormSecondPage from "./WizardFormSecondPage";
 import WizardFormThirdPage from "./WizardFormThirdPage";
+import { Steps } from "antd";
 import "./WizardForm.css";
+
+const Step = Steps.Step;
 
 class WizardForm extends Component {
   constructor(props) {
@@ -28,10 +30,17 @@ class WizardForm extends Component {
   }
 
   render() {
-    const { onSubmit } = this.props;
     const { page } = this.state;
     return (
       <div className="form-style">
+        <div className="form-steps">
+          <Steps size="small" current={this.state.page - 1}>
+            <Step title="Step 1" />
+            <Step title="Step 2" />
+            <Step title="Step 3" />
+          </Steps>
+        </div>
+
         {page === 1 && <WizardFormFirstPage onSubmit={this.nextPage} />}
         {page === 2 && (
           <WizardFormSecondPage
@@ -42,7 +51,6 @@ class WizardForm extends Component {
         {page === 3 && (
           <WizardFormThirdPage
             previousPage={this.previousPage}
-            onSubmit={onSubmit}
             jumpToFirstPage={this.jumpToFirstPage}
           />
         )}
@@ -50,9 +58,5 @@ class WizardForm extends Component {
     );
   }
 }
-
-WizardForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired
-};
 
 export default WizardForm;

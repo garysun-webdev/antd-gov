@@ -1,6 +1,5 @@
 import React from "react";
 import { Spin, Icon } from "antd";
-import { Row, Col } from "antd";
 
 const BotMsg = props => {
   if (props.text === "loading") {

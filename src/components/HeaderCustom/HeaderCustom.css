@@ -18,3 +18,12 @@
 .ant-menu-horizontal {
   border-bottom: none !important;
 }
+
+.custom-trigger {
+  font-size: 18px;
+  line-height: 64px;
+  /* padding: 0 px; */
+  cursor: pointer;
+  transition: color 0.3s;
+  float: right;
+}
