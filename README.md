@@ -33,8 +33,14 @@ This App aims to intimate a government website with these features:
 
 * Pages: Home, Contact, FAQ
 * WizardForm: Based on redux-form.
-* Chatbot: Help user to find information.
-* Data Visualisation: Use twitter data to find which city in Australia is best for immigration
+* Chatbot:
+
+- IBM Watson Conversation Service
+- Node.js based server to hide the credentials from client / use IBM's SDK
+- Client side use redux-thunk to handle asyn-request(promise)
+- Use debounce to improve reliability.
+
+* Data Visualisation: Use twitter data to find which city in Australia is best for immigration. The dataset is from one of my assignment. Relative code could be found at: [`cloud-computing`](https://github.com/itachi1232gg/Assignment2)
 
 ## Screenshot
 
