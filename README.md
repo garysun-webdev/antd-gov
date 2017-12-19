@@ -35,3 +35,9 @@ This App aims to intimate a government website with these features:
 * WizardForm: Based on redux-form.
 * Chatbot: Help user to find information.
 * Data Visualisation: Use twitter data to find which city in Australia is best for immigration
+
+## Screenshot
+
+<img src="https://australiamark.com.au/wp-content/uploads/2017/12/datav.png">
+<img src="https://australiamark.com.au/wp-content/uploads/2017/12/Homepage.png">
+<img src="https://australiamark.com.au/wp-content/uploads/2017/12/Screen-Shot-2017-12-20-at-12.41.27-AM.png">
