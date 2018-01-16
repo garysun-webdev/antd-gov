@@ -15,7 +15,7 @@ const { Footer } = Layout;
 class App extends Component {
   render() {
     return (
-      <Router basename="/antd-gov/">
+      <Router>
         <Layout className="layout">
           <HeaderCustom />
           <Switch>
