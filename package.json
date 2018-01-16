@@ -2,6 +2,7 @@
   "name": "antd-web",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://garysun-webdev.github.io/antd-gov/",
   "proxy": "https://chatbot-server-eaglegogogo.c9users.io/",
   "dependencies": {
     "@dschau/particles.js": "^2.0.0",
