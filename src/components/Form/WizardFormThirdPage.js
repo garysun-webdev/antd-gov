@@ -33,6 +33,8 @@ class WizardFormThirdPage extends Component {
         visible: false,
         confirmLoading: false
       });
+      this.props.reset();
+      this.props.jumpToFirstPage();
     }, 2000);
   };
 
@@ -51,8 +53,6 @@ class WizardFormThirdPage extends Component {
     });
 
     this.showModal();
-    // this.props.reset();
-    // this.props.jumpToFirstPage();
   }
 
   render() {

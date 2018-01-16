@@ -18,7 +18,6 @@ class HeaderCustom extends Component {
     window.onresize = () => {
       console.log("window size change");
       this.getClientWidth();
-      // console.log(document.body.clientWidth);
     };
   }
 
