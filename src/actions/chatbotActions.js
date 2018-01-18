@@ -6,57 +6,42 @@ export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_FAILURE = "FETCH_FAILURE";
 export const PUSH_MESSAGE = "PUSH_MESSAGE";
 
-let nextMsg = 1;
+let msgId = 1;
 
-export function fetchMessageStarted() {
+export function fetchMessageStarted(id) {
   return {
     type: FETCH_STARTED,
-    id: nextMsg
+    id
   };
 }
 
-export function fetchMessageSuccess(result) {
+export function fetchMessageSuccess(result, id) {
   return {
     type: FETCH_SUCCESS,
     data: result.data,
-    id: nextMsg++
+    id
   };
 }
 
-export function fetchMessageFailure(error) {
+export function fetchMessageFailure(error, id) {
   return {
     type: FETCH_FAILURE,
     error,
-    id: nextMsg++
+    id
   };
 }
 
 export function fetchMessage(userMsg) {
   return dispatch => {
-    dispatch(fetchMessageStarted());
+    dispatch(fetchMessageStarted(msgId));
+    const thisId = msgId;
+    msgId++;
     axios
       .post("https://chatbot-server-eaglegogogo.c9users.io/message", {
         text: userMsg
       })
-      .then(response => dispatch(fetchMessageSuccess(response)))
-      .catch(error => dispatch(fetchMessageFailure(error)));
-
-    // axios
-    //   .post("https://chatbot-server-eaglegogogo.c9users.io/message", {
-    //     text: userMsg
-    //   })
-    //   .then(function(response) {
-    //     console.log(response.data);
-    //   })
-    //   .catch(function(error) {
-    //     console.log(error);
-    //   });
-
-    // return {
-    //   type: FETCH_MESSAGE,
-    //   payload: request,
-    //   id: nextMsg++
-    // };
+      .then(response => dispatch(fetchMessageSuccess(response, thisId)))
+      .catch(error => dispatch(fetchMessageFailure(error, thisId)));
   };
 }
 
@@ -64,7 +49,7 @@ export function pushMessage(userMsg) {
   return {
     type: PUSH_MESSAGE,
     data: {
-      id: nextMsg++,
+      id: msgId++,
       sender: "user",
       data: userMsg
     }

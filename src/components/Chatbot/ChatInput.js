@@ -6,7 +6,7 @@ class ChatInput extends Component {
   constructor(props) {
     super();
     this.onInputChange = this.onInputChange.bind(this);
-    this.onFormSubmit = debounce(this.onFormSubmit.bind(this), 1000);
+    this.onFormSubmit = this.onFormSubmit.bind(this);
     this.state = { msg: "" };
   }
 
@@ -17,15 +17,15 @@ class ChatInput extends Component {
   onFormSubmit(event) {
     event.preventDefault();
     if (this.state.msg) {
-      this.props.pushMessage(this.state.msg);
-      this.props.fetchMessage(this.state.msg);
+      const msg = this.state.msg;
       this.setState({ msg: "" });
+      this.props.pushMessage(msg);
+      this.props.fetchMessage(msg);
     }
   }
 
   render() {
     return (
-      // <form onSubmit={this.onFormSubmit} className="input-group">
       <Input
         placeholder="press 'Enter' to send your message"
         value={this.state.msg}
@@ -34,13 +34,6 @@ class ChatInput extends Component {
         onPressEnter={this.onFormSubmit}
         size="large"
       />
-
-      // <span className="input-group-btn">
-      //   <button className="btn btn-primary" type="submit">
-      //     Submit
-      //   </button>
-      // </span>
-      // </form>
     );
   }
 }

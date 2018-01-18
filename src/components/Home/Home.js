@@ -22,7 +22,6 @@ const Home = () => (
             <Search
               placeholder="Search GOV.COM"
               onSearch={value => console.log(value)}
-              enterButton="Search"
               style={{ marginTop: "10px" }}
             />
           </Col>
@@ -31,26 +30,6 @@ const Home = () => (
     </Carousel>
     <Content>
       <div className="container-home">
-        {/* <Affix
-            offsetTop={10}
-            style={{ position: "absolute", top: 40, right: 30 }}
-          >
-            <ul className="affix-nav">
-              <li>
-                <a href="#stage1">Step One</a>
-              </li>
-              <li>
-                <a href="#stage2">Step Two</a>
-              </li>
-              <li>
-                <a href="#stage3">Step Three</a>
-              </li>
-              <li>
-                <a href="#stage4">Step Four</a>
-              </li>
-            </ul>
-          </Affix> */}
-
         <Row gutter={16}>
           <ChatBotIcon />
           <Col className="gutter-row" md={3} />
