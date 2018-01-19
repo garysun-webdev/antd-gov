@@ -7,6 +7,7 @@ export const FETCH_FAILURE = "FETCH_FAILURE";
 export const PUSH_MESSAGE = "PUSH_MESSAGE";
 
 let msgId = 1;
+let conversationContext = "";
 
 export function fetchMessageStarted(id) {
   return {
@@ -16,6 +17,8 @@ export function fetchMessageStarted(id) {
 }
 
 export function fetchMessageSuccess(result, id) {
+  conversationContext = result.data.conversationContext;
+  console.log(conversationContext);
   return {
     type: FETCH_SUCCESS,
     data: result.data,
@@ -38,7 +41,8 @@ export function fetchMessage(userMsg) {
     msgId++;
     axios
       .post("https://chatbot-server-eaglegogogo.c9users.io/message", {
-        text: userMsg
+        text: userMsg,
+        conversationContext
       })
       .then(response => dispatch(fetchMessageSuccess(response, thisId)))
       .catch(error => dispatch(fetchMessageFailure(error, thisId)));

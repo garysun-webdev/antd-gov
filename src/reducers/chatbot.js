@@ -34,7 +34,7 @@ export default function(state = initialState, action) {
         }
       });
 
-    case FETCH_SUCCESS:
+    case FETCH_FAILURE:
       //do not modify the existing one but create a new one
       return state.map(msg => {
         if (msg.id === action.id) {
